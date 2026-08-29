@@ -2,12 +2,13 @@
  
 This repository contains all lab reports, schematics, and simulation results for the CSE 450 (VLSI Design) course.
  
-**Course:** CSE 450
-**University:** University of Asia Pacific (UAP)
-**Student:** Md Rawnak Shalahen Fahim
-**Student ID:** 22201063
-**Section:** C1
-**Faculty:** Md. Rasheduzzaman
+- **Course:** CSE 450
+- **University:** University of Asia Pacific (UAP)
+- **Student:** Md Rawnak Shalahen Fahim
+- **Student ID:** 22201063
+- **Section:** C1
+- **Faculty:** Md. Rasheduzzaman
+
  
 ## Labs
  
