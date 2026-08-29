@@ -7,6 +7,7 @@ This repository contains all lab reports, schematics, and simulation results for
 **Student:** Md Rawnak Shalahen Fahim
 **Student ID:** 22201063
 **Section:** C1
+**Faculty:** Md. Rasheduzzaman
  
 ## Labs
  
@@ -14,7 +15,7 @@ This repository contains all lab reports, schematics, and simulation results for
 |---|-----------|--------|--------|
 | 01 | NOR Gate Design & Simulation in Cadence | [Lab-01-NOR-Gate](./Lab-01-NOR-Gate) | ✅ Complete |
 | 02 | — | — | 🔲 Not started |
-| 03 | — | — | 🔲 Not started |
+
  
 ## Tools Used
  
@@ -28,5 +29,5 @@ Each lab folder contains:
 - `README.md` — summary of the experiment
 - `schematics/` — circuit and symbol screenshots
 - `waveforms/` — simulation output plots
-- Final submitted lab report (`.docx`)
+- Final submitted lab report (`.pdf`)
  
