@@ -33,4 +33,4 @@ See `waveforms/` for the transient response plot.
 Output matches expected NOR logic — HIGH only when both inputs are LOW. Objective achieved with 0 simulation errors/warnings.
  
 ## Report
-Full report: `CSE_450_Lab_Report_NOR_Gate.docx`
+Full report: `CSE_450_Lab_Report_NOR_Gate.pdf`
