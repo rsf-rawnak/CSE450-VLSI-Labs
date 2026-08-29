@@ -12,15 +12,14 @@ Design a two-input CMOS NOR gate at the transistor level in Cadence Virtuoso, cr
 ## Circuit
 CMOS NOR gate implemented with two PMOS transistors in series (pull-up network) and two NMOS transistors in parallel (pull-down network).
  
-See `schematics/` for:
-- Transistor-level schematic
-- Symbol view
-- Testbench schematic
+Screenshots in this folder:
+- `transistor_level.png` — transistor-level schematic
+- `symbol.png` — symbol view
+- `testbench.png` — testbench schematic
 ## Simulation
 Transient analysis (0–400ps) run in ADE Assembler with Spectre. Voltage nodes Va, Vb, and Vout were probed.
  
-See `waveforms/` for the transient response plot.
- 
+- `waveform.png` — transient response plot
 ## Result
  
 | Va | Vb | Vout |
