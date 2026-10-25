@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/computer/cpu_design/program_rom.vhd";
+static const char *ng0 = "/home/ise/computer/Rawnak/cpu_design/program_rom.vhd";
 
 
 
@@ -46,67 +46,53 @@ static void work_a_0339436735_3212880686_p_0(char *t0)
     char *t20;
     int t22;
     char *t23;
-    int t25;
+    char *t25;
     char *t26;
-    int t28;
+    char *t27;
+    char *t28;
     char *t29;
-    char *t31;
-    char *t32;
-    char *t33;
-    char *t34;
-    char *t35;
 
 LAB0:    xsi_set_current_line(14, ng0);
     t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 4300);
+    t1 = (t0 + 4324);
     t4 = xsi_mem_cmp(t1, t2, 4U);
     if (t4 == 1)
         goto LAB3;
 
-LAB13:    t5 = (t0 + 4304);
+LAB11:    t5 = (t0 + 4328);
     t7 = xsi_mem_cmp(t5, t2, 4U);
     if (t7 == 1)
         goto LAB4;
 
-LAB14:    t8 = (t0 + 4308);
+LAB12:    t8 = (t0 + 4332);
     t10 = xsi_mem_cmp(t8, t2, 4U);
     if (t10 == 1)
         goto LAB5;
 
-LAB15:    t11 = (t0 + 4312);
+LAB13:    t11 = (t0 + 4336);
     t13 = xsi_mem_cmp(t11, t2, 4U);
     if (t13 == 1)
         goto LAB6;
 
-LAB16:    t14 = (t0 + 4316);
+LAB14:    t14 = (t0 + 4340);
     t16 = xsi_mem_cmp(t14, t2, 4U);
     if (t16 == 1)
         goto LAB7;
 
-LAB17:    t17 = (t0 + 4320);
+LAB15:    t17 = (t0 + 4344);
     t19 = xsi_mem_cmp(t17, t2, 4U);
     if (t19 == 1)
         goto LAB8;
 
-LAB18:    t20 = (t0 + 4324);
+LAB16:    t20 = (t0 + 4348);
     t22 = xsi_mem_cmp(t20, t2, 4U);
     if (t22 == 1)
         goto LAB9;
 
-LAB19:    t23 = (t0 + 4328);
-    t25 = xsi_mem_cmp(t23, t2, 4U);
-    if (t25 == 1)
-        goto LAB10;
-
-LAB20:    t26 = (t0 + 4332);
-    t28 = xsi_mem_cmp(t26, t2, 4U);
-    if (t28 == 1)
-        goto LAB11;
-
-LAB21:
-LAB12:    xsi_set_current_line(24, ng0);
-    t1 = (t0 + 4444);
+LAB17:
+LAB10:    xsi_set_current_line(22, ng0);
+    t1 = (t0 + 4436);
     t3 = (t0 + 2744);
     t5 = (t3 + 56U);
     t6 = *((char **)t5);
@@ -120,18 +106,18 @@ LAB2:    t1 = (t0 + 2664);
 
 LAB1:    return;
 LAB3:    xsi_set_current_line(15, ng0);
-    t29 = (t0 + 4336);
-    t31 = (t0 + 2744);
-    t32 = (t31 + 56U);
-    t33 = *((char **)t32);
-    t34 = (t33 + 56U);
-    t35 = *((char **)t34);
-    memcpy(t35, t29, 12U);
-    xsi_driver_first_trans_fast_port(t31);
+    t23 = (t0 + 4352);
+    t25 = (t0 + 2744);
+    t26 = (t25 + 56U);
+    t27 = *((char **)t26);
+    t28 = (t27 + 56U);
+    t29 = *((char **)t28);
+    memcpy(t29, t23, 12U);
+    xsi_driver_first_trans_fast_port(t25);
     goto LAB2;
 
 LAB4:    xsi_set_current_line(16, ng0);
-    t1 = (t0 + 4348);
+    t1 = (t0 + 4364);
     t3 = (t0 + 2744);
     t5 = (t3 + 56U);
     t6 = *((char **)t5);
@@ -142,7 +128,7 @@ LAB4:    xsi_set_current_line(16, ng0);
     goto LAB2;
 
 LAB5:    xsi_set_current_line(17, ng0);
-    t1 = (t0 + 4360);
+    t1 = (t0 + 4376);
     t3 = (t0 + 2744);
     t5 = (t3 + 56U);
     t6 = *((char **)t5);
@@ -153,7 +139,7 @@ LAB5:    xsi_set_current_line(17, ng0);
     goto LAB2;
 
 LAB6:    xsi_set_current_line(18, ng0);
-    t1 = (t0 + 4372);
+    t1 = (t0 + 4388);
     t3 = (t0 + 2744);
     t5 = (t3 + 56U);
     t6 = *((char **)t5);
@@ -164,7 +150,7 @@ LAB6:    xsi_set_current_line(18, ng0);
     goto LAB2;
 
 LAB7:    xsi_set_current_line(19, ng0);
-    t1 = (t0 + 4384);
+    t1 = (t0 + 4400);
     t3 = (t0 + 2744);
     t5 = (t3 + 56U);
     t6 = *((char **)t5);
@@ -175,7 +161,7 @@ LAB7:    xsi_set_current_line(19, ng0);
     goto LAB2;
 
 LAB8:    xsi_set_current_line(20, ng0);
-    t1 = (t0 + 4396);
+    t1 = (t0 + 4412);
     t3 = (t0 + 2744);
     t5 = (t3 + 56U);
     t6 = *((char **)t5);
@@ -186,7 +172,7 @@ LAB8:    xsi_set_current_line(20, ng0);
     goto LAB2;
 
 LAB9:    xsi_set_current_line(21, ng0);
-    t1 = (t0 + 4408);
+    t1 = (t0 + 4424);
     t3 = (t0 + 2744);
     t5 = (t3 + 56U);
     t6 = *((char **)t5);
@@ -196,29 +182,7 @@ LAB9:    xsi_set_current_line(21, ng0);
     xsi_driver_first_trans_fast_port(t3);
     goto LAB2;
 
-LAB10:    xsi_set_current_line(22, ng0);
-    t1 = (t0 + 4420);
-    t3 = (t0 + 2744);
-    t5 = (t3 + 56U);
-    t6 = *((char **)t5);
-    t8 = (t6 + 56U);
-    t9 = *((char **)t8);
-    memcpy(t9, t1, 12U);
-    xsi_driver_first_trans_fast_port(t3);
-    goto LAB2;
-
-LAB11:    xsi_set_current_line(23, ng0);
-    t1 = (t0 + 4432);
-    t3 = (t0 + 2744);
-    t5 = (t3 + 56U);
-    t6 = *((char **)t5);
-    t8 = (t6 + 56U);
-    t9 = *((char **)t8);
-    memcpy(t9, t1, 12U);
-    xsi_driver_first_trans_fast_port(t3);
-    goto LAB2;
-
-LAB22:;
+LAB18:;
 }
 
 

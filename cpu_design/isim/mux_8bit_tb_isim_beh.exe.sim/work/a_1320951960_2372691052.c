@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/computer/cpu_design/mux_8bit_tb.vhd";
+static const char *ng0 = "/home/ise/computer/Rawnak/cpu_design/mux_8bit_tb.vhd";
 
 
 
@@ -45,7 +45,7 @@ LAB0:    t1 = (t0 + 2664U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(43, ng0);
-    t2 = (t0 + 5001);
+    t2 = (t0 + 5057);
     t4 = (t0 + 3048);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -54,7 +54,7 @@ LAB2:    xsi_set_current_line(43, ng0);
     memcpy(t8, t2, 8U);
     xsi_driver_first_trans_fast(t4);
     xsi_set_current_line(44, ng0);
-    t2 = (t0 + 5009);
+    t2 = (t0 + 5065);
     t4 = (t0 + 3112);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -99,7 +99,7 @@ LAB5:    goto LAB4;
 LAB7:    goto LAB5;
 
 LAB8:    xsi_set_current_line(53, ng0);
-    t2 = (t0 + 5017);
+    t2 = (t0 + 5073);
     t4 = (t0 + 3048);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -108,7 +108,7 @@ LAB8:    xsi_set_current_line(53, ng0);
     memcpy(t8, t2, 8U);
     xsi_driver_first_trans_fast(t4);
     xsi_set_current_line(54, ng0);
-    t2 = (t0 + 5025);
+    t2 = (t0 + 5081);
     t4 = (t0 + 3112);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -157,7 +157,7 @@ LAB13:    goto LAB12;
 LAB15:    goto LAB13;
 
 LAB16:    xsi_set_current_line(63, ng0);
-    t2 = (t0 + 5033);
+    t2 = (t0 + 5089);
     t4 = (t0 + 3048);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -166,7 +166,7 @@ LAB16:    xsi_set_current_line(63, ng0);
     memcpy(t8, t2, 8U);
     xsi_driver_first_trans_fast(t4);
     xsi_set_current_line(64, ng0);
-    t2 = (t0 + 5041);
+    t2 = (t0 + 5097);
     t4 = (t0 + 3112);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -195,7 +195,7 @@ LAB17:    goto LAB16;
 LAB19:    goto LAB17;
 
 LAB20:    xsi_set_current_line(69, ng0);
-    t2 = (t0 + 5049);
+    t2 = (t0 + 5105);
     t4 = (t0 + 3048);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -204,7 +204,7 @@ LAB20:    xsi_set_current_line(69, ng0);
     memcpy(t8, t2, 8U);
     xsi_driver_first_trans_fast(t4);
     xsi_set_current_line(70, ng0);
-    t2 = (t0 + 5057);
+    t2 = (t0 + 5113);
     t4 = (t0 + 3112);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);

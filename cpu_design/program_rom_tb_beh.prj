@@ -1,0 +1,2 @@
+vhdl work "program_rom.vhd"
+vhdl work "program_rom_tb.vhd"

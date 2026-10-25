@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: alu_8bit.prj
@@ -108,31 +108,31 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/ise/computer/cpu_design/nand_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/nand_gate.vhd" into library work
 Parsing entity <nand_gate>.
 Parsing architecture <Dataflow> of entity <nand_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/xor_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/xor_gate.vhd" into library work
 Parsing entity <xor_gate>.
 Parsing architecture <Structural> of entity <xor_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/and_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/and_gate.vhd" into library work
 Parsing entity <and_gate>.
 Parsing architecture <Structural> of entity <and_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/or_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/or_gate.vhd" into library work
 Parsing entity <or_gate>.
 Parsing architecture <Structural> of entity <or_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/half_adder.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/half_adder.vhd" into library work
 Parsing entity <half_adder>.
 Parsing architecture <Structural> of entity <half_adder>.
-Parsing VHDL file "/home/ise/computer/cpu_design/full_adder.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/full_adder.vhd" into library work
 Parsing entity <full_adder>.
 Parsing architecture <Structural> of entity <full_adder>.
-Parsing VHDL file "/home/ise/computer/cpu_design/not_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/not_gate.vhd" into library work
 Parsing entity <not_gate>.
 Parsing architecture <Structural> of entity <not_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/full_adder_8bit.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/full_adder_8bit.vhd" into library work
 Parsing entity <full_adder_8bit>.
 Parsing architecture <Structural> of entity <full_adder_8bit>.
-Parsing VHDL file "/home/ise/computer/cpu_design/alu_8bit.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/alu_8bit.vhd" into library work
 Parsing entity <alu_8bit>.
 Parsing architecture <Structural> of entity <alu_8bit>.
 
@@ -142,10 +142,6 @@ Parsing architecture <Structural> of entity <alu_8bit>.
 
 Elaborating entity <alu_8bit> (architecture <Structural>) from library <work>.
 
-Elaborating entity <not_gate> (architecture <Structural>) from library <work>.
-
-Elaborating entity <nand_gate> (architecture <Dataflow>) from library <work>.
-
 Elaborating entity <full_adder_8bit> (architecture <Structural>) from library <work>.
 
 Elaborating entity <full_adder> (architecture <Structural>) from library <work>.
@@ -154,74 +150,81 @@ Elaborating entity <half_adder> (architecture <Structural>) from library <work>.
 
 Elaborating entity <xor_gate> (architecture <Structural>) from library <work>.
 
+Elaborating entity <nand_gate> (architecture <Dataflow>) from library <work>.
+
 Elaborating entity <and_gate> (architecture <Structural>) from library <work>.
 
 Elaborating entity <or_gate> (architecture <Structural>) from library <work>.
+
+Elaborating entity <not_gate> (architecture <Structural>) from library <work>.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <alu_8bit>.
-    Related source file is "/home/ise/computer/cpu_design/alu_8bit.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/alu_8bit.vhd".
+INFO:Xst:3210 - "/home/ise/computer/Rawnak/cpu_design/alu_8bit.vhd" line 34: Output port <COUT> of the instance <ADDER> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/computer/Rawnak/cpu_design/alu_8bit.vhd" line 42: Output port <COUT> of the instance <SUBTRACTOR> is unconnected or connected to loadless signal.
+    Found 8-bit 4-to-1 multiplexer for signal <RESULT> created at line 48.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <alu_8bit> synthesized.
 
-Synthesizing Unit <not_gate>.
-    Related source file is "/home/ise/computer/cpu_design/not_gate.vhd".
-    Summary:
-	no macro.
-Unit <not_gate> synthesized.
-
-Synthesizing Unit <nand_gate>.
-    Related source file is "/home/ise/computer/cpu_design/nand_gate.vhd".
-    Summary:
-	no macro.
-Unit <nand_gate> synthesized.
-
 Synthesizing Unit <full_adder_8bit>.
-    Related source file is "/home/ise/computer/cpu_design/full_adder_8bit.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/full_adder_8bit.vhd".
     Summary:
 	no macro.
 Unit <full_adder_8bit> synthesized.
 
 Synthesizing Unit <full_adder>.
-    Related source file is "/home/ise/computer/cpu_design/full_adder.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/full_adder.vhd".
     Summary:
 	no macro.
 Unit <full_adder> synthesized.
 
 Synthesizing Unit <half_adder>.
-    Related source file is "/home/ise/computer/cpu_design/half_adder.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/half_adder.vhd".
     Summary:
 	no macro.
 Unit <half_adder> synthesized.
 
 Synthesizing Unit <xor_gate>.
-    Related source file is "/home/ise/computer/cpu_design/xor_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/xor_gate.vhd".
     Summary:
 	no macro.
 Unit <xor_gate> synthesized.
 
+Synthesizing Unit <nand_gate>.
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/nand_gate.vhd".
+    Summary:
+	no macro.
+Unit <nand_gate> synthesized.
+
 Synthesizing Unit <and_gate>.
-    Related source file is "/home/ise/computer/cpu_design/and_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/and_gate.vhd".
     Summary:
 	no macro.
 Unit <and_gate> synthesized.
 
 Synthesizing Unit <or_gate>.
-    Related source file is "/home/ise/computer/cpu_design/or_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/or_gate.vhd".
     Summary:
 	no macro.
 Unit <or_gate> synthesized.
+
+Synthesizing Unit <not_gate>.
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/not_gate.vhd".
+    Summary:
+	no macro.
+Unit <not_gate> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
 # Multiplexers                                         : 1
- 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -229,13 +232,33 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <AND1> is unconnected in block <HA1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <AND1> is unconnected in block <HA2>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <OR1> is unconnected in block <FA7>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <AND1> is unconnected in block <HA1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <AND1> is unconnected in block <HA2>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <OR1> is unconnected in block <FA7>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <NAND1> is unconnected in block <XOR1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <NAND3> is unconnected in block <XOR1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <AND1> is unconnected in block <HA2>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <NAND2> is unconnected in block <OR1>.
+   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # Multiplexers                                         : 1
- 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -278,14 +301,16 @@ Top Level Output File Name         : alu_8bit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 12
-#      LUT2                        : 1
-#      LUT4                        : 3
-#      LUT5                        : 2
-#      LUT6                        : 6
+# BELS                             : 26
+#      LUT2                        : 4
+#      LUT3                        : 1
+#      LUT4                        : 2
+#      LUT5                        : 10
+#      LUT6                        : 7
+#      MUXF7                       : 2
 # IO Buffers                       : 26
-#      IBUF                        : 17
-#      OBUF                        : 9
+#      IBUF                        : 18
+#      OBUF                        : 8
 
 Device utilization summary:
 ---------------------------
@@ -294,14 +319,14 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   12  out of  63400     0%  
-    Number used as Logic:                12  out of  63400     0%  
+ Number of Slice LUTs:                   24  out of  63400     0%  
+    Number used as Logic:                24  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     12
-   Number with an unused Flip Flop:      12  out of     12   100%  
-   Number with an unused LUT:             0  out of     12     0%  
-   Number of fully used LUT-FF pairs:     0  out of     12     0%  
+ Number of LUT Flip Flop pairs used:     24
+   Number with an unused Flip Flop:      24  out of     24   100%  
+   Number with an unused LUT:             0  out of     24     0%  
+   Number of fully used LUT-FF pairs:     0  out of     24     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -341,7 +366,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 2.655ns
+   Maximum combinational path delay: 2.809ns
 
 Timing Details:
 ---------------
@@ -349,25 +374,26 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 111 / 9
+  Total number of paths / destination ports: 161 / 8
 -------------------------------------------------------------------------
-Delay:               2.655ns (Levels of Logic = 6)
+Delay:               2.809ns (Levels of Logic = 7)
   Source:            A<1> (PAD)
-  Destination:       COUT (PAD)
+  Destination:       RESULT<7> (PAD)
 
-  Data Path: A<1> to COUT
+  Data Path: A<1> to RESULT<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.688  A_1_IBUF (A_1_IBUF)
-     LUT5:I0->O            3   0.097   0.389  ADDER/FA2/HA2/AND1/NAND1/n000021 (ADDER/FA2/HA2/AND1/NAND1/n00002)
-     LUT6:I4->O            3   0.097   0.389  ADDER/FA4/HA2/AND1/NAND1/n000021 (ADDER/FA4/HA2/AND1/NAND1/n00002)
-     LUT6:I4->O            3   0.097   0.521  ADDER/FA6/HA2/AND1/NAND1/n000021 (ADDER/FA6/HA2/AND1/NAND1/n00002)
-     LUT6:I3->O            1   0.097   0.279  OR_FLAG/NAND3/Y1 (COUT_OBUF)
-     OBUF:I->O                 0.000          COUT_OBUF (COUT)
+     IBUF:I->O             4   0.001   0.570  A_1_IBUF (A_1_IBUF)
+     LUT4:I0->O            3   0.097   0.389  ADDER/FA2/HA2/AND1/NAND1/n000021 (ADDER/FA2/HA2/AND1/NAND1/n00002)
+     LUT5:I3->O            3   0.097   0.389  ADDER/FA4/HA2/AND1/NAND1/n000021 (ADDER/FA4/HA2/AND1/NAND1/n00002)
+     LUT5:I3->O            2   0.097   0.515  ADDER/FA6/HA2/AND1/NAND1/n000021 (ADDER/FA6/HA2/AND1/NAND1/n00002)
+     LUT6:I3->O            1   0.097   0.000  Mmux_RESULT83_F (N12)
+     MUXF7:I0->O           1   0.277   0.279  Mmux_RESULT83 (RESULT_7_OBUF)
+     OBUF:I->O                 0.000          RESULT_7_OBUF (RESULT<7>)
     ----------------------------------------
-    Total                      2.655ns (0.389ns logic, 2.266ns route)
-                                       (14.7% logic, 85.3% route)
+    Total                      2.809ns (0.666ns logic, 2.143ns route)
+                                       (23.7% logic, 76.3% route)
 
 =========================================================================
 
@@ -377,15 +403,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.45 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 8.50 secs
  
 --> 
 
 
-Total memory usage is 593772 kilobytes
+Total memory usage is 594196 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

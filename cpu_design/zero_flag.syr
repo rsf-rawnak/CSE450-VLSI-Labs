@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: zero_flag.prj
@@ -108,16 +108,16 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/ise/computer/cpu_design/nand_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/nand_gate.vhd" into library work
 Parsing entity <nand_gate>.
 Parsing architecture <Dataflow> of entity <nand_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/not_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/not_gate.vhd" into library work
 Parsing entity <not_gate>.
 Parsing architecture <Structural> of entity <not_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/and_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/and_gate.vhd" into library work
 Parsing entity <and_gate>.
 Parsing architecture <Structural> of entity <and_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/zero_flag.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/zero_flag.vhd" into library work
 Parsing entity <zero_flag>.
 Parsing architecture <Structural> of entity <zero_flag>.
 
@@ -138,25 +138,25 @@ Elaborating entity <and_gate> (architecture <Structural>) from library <work>.
 =========================================================================
 
 Synthesizing Unit <zero_flag>.
-    Related source file is "/home/ise/computer/cpu_design/zero_flag.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/zero_flag.vhd".
     Summary:
 	no macro.
 Unit <zero_flag> synthesized.
 
 Synthesizing Unit <not_gate>.
-    Related source file is "/home/ise/computer/cpu_design/not_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/not_gate.vhd".
     Summary:
 	no macro.
 Unit <not_gate> synthesized.
 
 Synthesizing Unit <nand_gate>.
-    Related source file is "/home/ise/computer/cpu_design/nand_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/nand_gate.vhd".
     Summary:
 	no macro.
 Unit <nand_gate> synthesized.
 
 Synthesizing Unit <and_gate>.
-    Related source file is "/home/ise/computer/cpu_design/and_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/and_gate.vhd".
     Summary:
 	no macro.
 Unit <and_gate> synthesized.
@@ -311,12 +311,12 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.34 secs
+Total CPU time to Xst completion: 8.20 secs
  
 --> 
 
 
-Total memory usage is 593460 kilobytes
+Total memory usage is 593268 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

@@ -1,135 +1,62 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-entity control_unit_tb is
-end control_unit_tb;
-
-architecture Behavioral of control_unit_tb is
-
-    component control_unit
-        Port (
-            CLK         : in  STD_LOGIC;
-            RESET       : in  STD_LOGIC;
-            INSTRUCTION : in  STD_LOGIC_VECTOR(11 downto 0);
-            LOAD_EN     : out STD_LOGIC;
-            ADD_EN      : out STD_LOGIC;
-            NOT_EN      : out STD_LOGIC;
-            SHL_EN      : out STD_LOGIC;
-            JZ_EN       : out STD_LOGIC;
-            PC_RESET    : out STD_LOGIC;
-            PC_LOAD     : out STD_LOGIC
+ENTITY control_unit_tb IS
+END control_unit_tb;
+ARCHITECTURE behavior OF control_unit_tb IS
+    COMPONENT control_unit
+        PORT (
+            OPCODE  : IN  std_logic_vector(3 downto 0);
+            LOAD_EN : OUT std_logic;
+            ALU_OP  : OUT std_logic_vector(1 downto 0);
+            ACC_WR  : OUT std_logic
         );
-    end component;
-    signal CLK         : STD_LOGIC := '0';
-    signal RESET       : STD_LOGIC := '0';
-    signal INSTRUCTION : STD_LOGIC_VECTOR(11 downto 0) := x"000";
-
-    signal LOAD_EN  : STD_LOGIC;
-    signal ADD_EN   : STD_LOGIC;
-    signal NOT_EN   : STD_LOGIC;
-    signal SHL_EN   : STD_LOGIC;
-    signal JZ_EN    : STD_LOGIC;
-    signal PC_RESET : STD_LOGIC;
-    signal PC_LOAD  : STD_LOGIC;
-
-    constant CLK_PERIOD : time := 20 ns;
-begin
-
-    UUT: control_unit
-        port map (
-            CLK         => CLK,
-            RESET       => RESET,
-            INSTRUCTION => INSTRUCTION,
-            LOAD_EN     => LOAD_EN,
-            ADD_EN      => ADD_EN,
-            NOT_EN      => NOT_EN,
-            SHL_EN      => SHL_EN,
-            JZ_EN       => JZ_EN,
-            PC_RESET    => PC_RESET,
-            PC_LOAD     => PC_LOAD
-        );
-    CLK_PROCESS: process
+    END COMPONENT;
+    signal OPCODE  : std_logic_vector(3 downto 0) := "0000";
+    signal LOAD_EN : std_logic;
+    signal ALU_OP  : std_logic_vector(1 downto 0);
+    signal ACC_WR  : std_logic;
+BEGIN
+    uut : control_unit
+        PORT MAP (OPCODE => OPCODE, LOAD_EN => LOAD_EN, ALU_OP => ALU_OP, ACC_WR => ACC_WR);
+    stim_proc : process
     begin
-        while true loop
-            CLK <= '0';
-            wait for CLK_PERIOD / 2;
-            CLK <= '1';
-            wait for CLK_PERIOD / 2;
-        end loop;
-    end process;
+        -- NOP (0000)
+        OPCODE <= "0000"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '0' report "FAIL: NOP" severity error;
+        -- LDI (0001)
+        OPCODE <= "0001"; wait for 10 ns;
+        assert LOAD_EN = '1' and ACC_WR = '1' report "FAIL: LDI" severity error;
 
-    STIMULUS: process
-    begin
-        -- Test RESET
-        RESET <= '1';
-        INSTRUCTION <= x"000";
-        wait until rising_edge(CLK);
-        wait for 1 ns;
+        -- ADD (0010)
+        OPCODE <= "0010"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '1' and ALU_OP = "00" report "FAIL: ADD" severity error;
+        -- SUB (0011)
+        OPCODE <= "0011"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '1' and ALU_OP = "10" report "FAIL: SUB" severity error;
 
-        assert PC_RESET = '1'
-            report "RESET test failed"
-            severity error;
-
-        RESET <= '0';
-        -- Test LOAD instruction
-        INSTRUCTION <= x"1FF";
-        wait until rising_edge(CLK);
-        wait for 1 ns;
-
-        assert LOAD_EN = '1' and ADD_EN = '0'
-            report "LOAD instruction test failed"
-            severity error;
-
-        -- Test ADD instruction
-        INSTRUCTION <= x"277";
-        wait until rising_edge(CLK);
-        wait for 1 ns;
-        assert ADD_EN = '1' and LOAD_EN = '0'
-            report "ADD instruction test failed"
-            severity error;
-
-        -- Test NOT instruction
-        INSTRUCTION <= x"700";
-        wait until rising_edge(CLK);
-        wait for 1 ns;
-
-        assert NOT_EN = '1'
-            report "NOT instruction test failed"
-            severity error;
-        -- Test SHL instruction
-        INSTRUCTION <= x"800";
-        wait until rising_edge(CLK);
-        wait for 1 ns;
-
-        assert SHL_EN = '1'
-            report "SHL instruction test failed"
-            severity error;
-
-        -- Test JZ instruction
-        INSTRUCTION <= x"C05";
-        wait until rising_edge(CLK);
-        wait for 1 ns;
-        assert JZ_EN = '1' and PC_LOAD = '1'
-            report "JZ instruction test failed"
-            severity error;
-
-        -- Test NOP instruction
-        INSTRUCTION <= x"000";
-        wait until rising_edge(CLK);
-        wait for 1 ns;
-        assert LOAD_EN = '0' and
-               ADD_EN  = '0' and
-               NOT_EN  = '0' and
-               SHL_EN  = '0' and
-               JZ_EN   = '0' and
-               PC_LOAD = '0'
-            report "Invalid/NOP instruction test failed"
-            severity error;
-
-        report "Control unit test completed successfully."
-            severity note;
-
+        -- XOR (0110)
+        OPCODE <= "0110"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '1' and ALU_OP = "01" report "FAIL: XOR" severity error;
+        -- SHR (1001)
+        OPCODE <= "1001"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '1' and ALU_OP = "11" report "FAIL: SHR" severity error;
+        -- Opcodes not in Set 3 must behave as NOP
+        OPCODE <= "0100"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '0' report "FAIL: AND should be NOP" severity error;
+        OPCODE <= "0101"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '0' report "FAIL: OR should be NOP" severity error;
+        OPCODE <= "0111"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '0' report "FAIL: NOT should be NOP" severity error;
+        OPCODE <= "1000"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '0' report "FAIL: SHL should be NOP" severity error;
+        OPCODE <= "1010"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '0' report "FAIL: STA should be NOP" severity error;
+        OPCODE <= "1011"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '0' report "FAIL: LDR should be NOP" severity error;
+        OPCODE <= "1100"; wait for 10 ns;
+        assert LOAD_EN = '0' and ACC_WR = '0' report "FAIL: JZ should be NOP" severity error;
+        report "control_unit testbench completed." severity note;
         wait;
     end process;
-
-end Behavioral;
+END behavior;

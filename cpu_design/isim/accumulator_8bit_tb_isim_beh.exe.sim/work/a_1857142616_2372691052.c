@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/computer/cpu_design/accumulator_8bit_tb.vhd";
+static const char *ng0 = "/home/ise/computer/Rawnak/cpu_design/accumulator_8bit_tb.vhd";
 
 
 

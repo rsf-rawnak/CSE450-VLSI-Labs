@@ -76,6 +76,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="control_unit.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="control_unit.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="control_unit.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="control_unit_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="control_unit_summary.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="control_unit_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="control_unit_xst.xrpt"/>
@@ -89,7 +90,6 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="cpu_top.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cpu_top_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cpu_top_summary.html"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cpu_top_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="cpu_top_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cpu_top_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="full_adder_8bit.cmd_log"/>
@@ -161,9 +161,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="program_counter.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="program_counter_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="program_counter_summary.html"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="program_counter_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="program_counter_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="program_counter_tb_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="program_counter_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="program_counter_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="program_rom.cmd_log"/>
@@ -176,7 +174,9 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="program_rom.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="program_rom_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="program_rom_summary.html"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="program_rom_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="program_rom_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="program_rom_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="program_rom_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="register_8bit.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="register_8bit.lso"/>
@@ -223,7 +223,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792677310" xil_pn:in_ck="6506758604753093397" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1792677310">
+    <transform xil_pn:end_ts="1792685822" xil_pn:in_ck="6506758604753093397" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1792685822">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="accumulator.vhd"/>
@@ -265,19 +265,19 @@
       <outfile xil_pn:name="zero_flag.vhd"/>
       <outfile xil_pn:name="zero_flag_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1792677310" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="2148327514941322924" xil_pn:start_ts="1792677310">
+    <transform xil_pn:end_ts="1792686448" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-9047753146228721318" xil_pn:start_ts="1792686448">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792677310" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2256592875412349642" xil_pn:start_ts="1792677310">
+    <transform xil_pn:end_ts="1792686448" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4912456372219779704" xil_pn:start_ts="1792686448">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792677026" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8928493521404094609" xil_pn:start_ts="1792677026">
+    <transform xil_pn:end_ts="1792685822" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="698977089969487334" xil_pn:start_ts="1792685822">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792677310" xil_pn:in_ck="6506758604753093397" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1792677310">
+    <transform xil_pn:end_ts="1792685822" xil_pn:in_ck="6506758604753093397" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1792685822">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="accumulator.vhd"/>
@@ -319,7 +319,7 @@
       <outfile xil_pn:name="zero_flag.vhd"/>
       <outfile xil_pn:name="zero_flag_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1792677313" xil_pn:in_ck="6506758604753093397" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3621133200682842302" xil_pn:start_ts="1792677310">
+    <transform xil_pn:end_ts="1792686451" xil_pn:in_ck="6506758604753093397" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7995547732340546330" xil_pn:start_ts="1792686448">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -327,65 +327,67 @@
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="program_counter_tb_beh.prj"/>
-      <outfile xil_pn:name="program_counter_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="program_rom_tb_beh.prj"/>
+      <outfile xil_pn:name="program_rom_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1792677313" xil_pn:in_ck="7223796472568785174" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5861748164408097535" xil_pn:start_ts="1792677313">
+    <transform xil_pn:end_ts="1792686451" xil_pn:in_ck="7223796472568785174" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1268311916237603683" xil_pn:start_ts="1792686451">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="program_counter_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="program_rom_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1791516009" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1791516009">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792676525" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2263338968107039705" xil_pn:start_ts="1792676525">
+    <transform xil_pn:end_ts="1792685549" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3558402673004331134" xil_pn:start_ts="1792685549">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792676525" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8928493521404094609" xil_pn:start_ts="1792676525">
+    <transform xil_pn:end_ts="1792685549" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="698977089969487334" xil_pn:start_ts="1792685549">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792676525" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1792676525">
+    <transform xil_pn:end_ts="1792685549" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1792685549">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792676525" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4129188244708054857" xil_pn:start_ts="1792676525">
+    <transform xil_pn:end_ts="1792685549" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-4142076777955683168" xil_pn:start_ts="1792685549">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792676525" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1792676525">
+    <transform xil_pn:end_ts="1792685549" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1792685549">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792676525" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4121979342509804807" xil_pn:start_ts="1792676525">
+    <transform xil_pn:end_ts="1792685549" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7798715108680888720" xil_pn:start_ts="1792685549">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1792676538" xil_pn:in_ck="-4326123250586844759" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-7940781218684250868" xil_pn:start_ts="1792676525">
+    <transform xil_pn:end_ts="1792685562" xil_pn:in_ck="-4326123250586844759" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="696981875801050275" xil_pn:start_ts="1792685549">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="accumulator.lso"/>
-      <outfile xil_pn:name="accumulator.ngc"/>
-      <outfile xil_pn:name="accumulator.ngr"/>
-      <outfile xil_pn:name="accumulator.prj"/>
-      <outfile xil_pn:name="accumulator.stx"/>
-      <outfile xil_pn:name="accumulator.syr"/>
-      <outfile xil_pn:name="accumulator.xst"/>
-      <outfile xil_pn:name="accumulator_8bit.prj"/>
-      <outfile xil_pn:name="accumulator_xst.xrpt"/>
       <outfile xil_pn:name="and_gate.ngr"/>
+      <outfile xil_pn:name="full_adder_8bit.ngr"/>
       <outfile xil_pn:name="mux_8bit.ngr"/>
       <outfile xil_pn:name="not_gate.ngr"/>
       <outfile xil_pn:name="or_gate.ngr"/>
+      <outfile xil_pn:name="program_counter.lso"/>
+      <outfile xil_pn:name="program_counter.ngc"/>
+      <outfile xil_pn:name="program_counter.ngr"/>
+      <outfile xil_pn:name="program_counter.prj"/>
+      <outfile xil_pn:name="program_counter.stx"/>
+      <outfile xil_pn:name="program_counter.syr"/>
+      <outfile xil_pn:name="program_counter.xst"/>
+      <outfile xil_pn:name="program_counter_tb_stx_beh.prj"/>
+      <outfile xil_pn:name="program_counter_xst.xrpt"/>
       <outfile xil_pn:name="register_8bit.ngr"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xor_gate.ngr"/>
       <outfile xil_pn:name="xst"/>
     </transform>
   </transforms>

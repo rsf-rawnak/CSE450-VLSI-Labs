@@ -1,94 +1,37 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-entity instruction_decoder_tb is
-end instruction_decoder_tb;
-
-architecture Behavioral of instruction_decoder_tb is
-    component instruction_decoder
-        Port (
-            INSTRUCTION : in  STD_LOGIC_VECTOR(11 downto 0);
-            OPCODE      : out STD_LOGIC_VECTOR(3 downto 0);
-            OPERAND     : out STD_LOGIC_VECTOR(7 downto 0);
-            LOAD_EN     : out STD_LOGIC;
-            ADD_EN      : out STD_LOGIC;
-            NOT_EN      : out STD_LOGIC;
-            SHL_EN      : out STD_LOGIC;
-            JZ_EN       : out STD_LOGIC
+ENTITY instruction_decoder_tb IS
+END instruction_decoder_tb;
+ARCHITECTURE behavior OF instruction_decoder_tb IS
+    COMPONENT instruction_decoder
+        PORT (
+            INSTRUCTION : IN  std_logic_vector(11 downto 0);
+            OPCODE      : OUT std_logic_vector(3 downto 0);
+            OPERAND     : OUT std_logic_vector(7 downto 0)
         );
-    end component;
-    signal INSTRUCTION : STD_LOGIC_VECTOR(11 downto 0);
-    signal OPCODE      : STD_LOGIC_VECTOR(3 downto 0);
-    signal OPERAND     : STD_LOGIC_VECTOR(7 downto 0);
-    signal LOAD_EN     : STD_LOGIC;
-    signal ADD_EN      : STD_LOGIC;
-    signal NOT_EN      : STD_LOGIC;
-    signal SHL_EN      : STD_LOGIC;
-    signal JZ_EN       : STD_LOGIC;
-begin
-
-    UUT: instruction_decoder
-        port map (
-            INSTRUCTION => INSTRUCTION,
-            OPCODE      => OPCODE,
-            OPERAND     => OPERAND,
-            LOAD_EN     => LOAD_EN,
-            ADD_EN      => ADD_EN,
-            NOT_EN      => NOT_EN,
-            SHL_EN      => SHL_EN,
-            JZ_EN       => JZ_EN
-        );
-    stimulus: process
+    END COMPONENT;
+    signal INSTRUCTION : std_logic_vector(11 downto 0) := (others => '0');
+    signal OPCODE      : std_logic_vector(3 downto 0);
+    signal OPERAND     : std_logic_vector(7 downto 0);
+BEGIN
+    uut : instruction_decoder
+        PORT MAP (INSTRUCTION => INSTRUCTION, OPCODE => OPCODE, OPERAND => OPERAND);
+    stim_proc : process
     begin
-
-        -- Test LDI instruction
-        INSTRUCTION <= x"1FF";
-        wait for 10 ns;
-        assert LOAD_EN = '1' and OPERAND = x"FF"
-            report "LDI decode failed"
-            severity error;
-        -- Test ADD instruction
-        INSTRUCTION <= x"277";
-        wait for 10 ns;
-        assert ADD_EN = '1' and OPERAND = x"77"
-            report "ADD decode failed"
-            severity error;
-
-        -- Test NOT instruction
-        INSTRUCTION <= x"700";
-        wait for 10 ns;
-        assert NOT_EN = '1'
-            report "NOT decode failed"
-            severity error;
-        -- Test SHL instruction
-        INSTRUCTION <= x"800";
-        wait for 10 ns;
-        assert SHL_EN = '1'
-            report "SHL decode failed"
-            severity error;
-
-        -- Test JZ instruction
-        INSTRUCTION <= x"C05";
-        wait for 10 ns;
-        assert JZ_EN = '1' and OPERAND = x"05"
-            report "JZ decode failed"
-            severity error;
-				
-        -- Test NOP instruction
-        INSTRUCTION <= x"000";
-        wait for 10 ns;
-        assert LOAD_EN = '0' and
-               ADD_EN  = '0' and
-               NOT_EN  = '0' and
-               SHL_EN  = '0' and
-               JZ_EN   = '0'
-            report "NOP decode failed"
-            severity error;
-
-        report "Instruction decoder test completed successfully."
-            severity note;
-
+        INSTRUCTION <= x"180"; wait for 10 ns;   -- LDI 80
+        assert OPCODE = "0001" and OPERAND = x"80" report "FAIL: LDI 80" severity error;
+        INSTRUCTION <= x"20F"; wait for 10 ns;   -- ADD 0F
+        assert OPCODE = "0010" and OPERAND = x"0F" report "FAIL: ADD 0F" severity error;
+        INSTRUCTION <= x"310"; wait for 10 ns;   -- SUB 10
+        assert OPCODE = "0011" and OPERAND = x"10" report "FAIL: SUB 10" severity error;
+        INSTRUCTION <= x"63F"; wait for 10 ns;   -- XOR 3F
+        assert OPCODE = "0110" and OPERAND = x"3F" report "FAIL: XOR 3F" severity error;
+        INSTRUCTION <= x"900"; wait for 10 ns;   -- SHR
+        assert OPCODE = "1001" and OPERAND = x"00" report "FAIL: SHR" severity error;
+        INSTRUCTION <= x"000"; wait for 10 ns;   -- NOP
+        assert OPCODE = "0000" and OPERAND = x"00" report "FAIL: NOP" severity error;
+        report "instruction_decoder testbench completed." severity note;
         wait;
     end process;
-
-end Behavioral;
+END behavior;

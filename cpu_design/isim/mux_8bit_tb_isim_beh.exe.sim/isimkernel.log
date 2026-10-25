@@ -2,14 +2,14 @@ Command line:
    mux_8bit_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  47837
+     -socket  38197
 
-Fri Oct  9 04:03:43 2026
+Thu Oct 22 16:23:39 2026
 
 
- Elaboration Time: 0.04 sec
+ Elaboration Time: 0.03 sec
 
- Current Memory Usage: 199.16 Meg
+ Current Memory Usage: 199.156 Meg
 
  Total Signals          : 288
  Total Nets             : 74
@@ -22,7 +22,7 @@ Fri Oct  9 04:03:43 2026
 
  Total Simulation Time: 0.04 sec
 
- Current Memory Usage: 276.759 Meg
+ Current Memory Usage: 276.754 Meg
 
-Fri Oct  9 04:04:11 2026
+Thu Oct 22 16:24:57 2026
 

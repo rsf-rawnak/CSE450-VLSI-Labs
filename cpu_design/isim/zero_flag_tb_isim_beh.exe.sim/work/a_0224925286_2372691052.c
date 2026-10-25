@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/computer/cpu_design/zero_flag_tb.vhd";
+static const char *ng0 = "/home/ise/computer/tasnim/cpu_design/zero_flag_tb.vhd";
 
 
 
@@ -47,7 +47,7 @@ LAB0:    t1 = (t0 + 2344U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(30, ng0);
-    t2 = (t0 + 4393);
+    t2 = (t0 + 4433);
     t4 = (t0 + 2728);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -72,7 +72,7 @@ LAB4:    xsi_set_current_line(32, ng0);
         goto LAB8;
 
 LAB9:    xsi_set_current_line(36, ng0);
-    t2 = (t0 + 4433);
+    t2 = (t0 + 4473);
     t4 = (t0 + 2728);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -92,7 +92,7 @@ LAB5:    goto LAB4;
 
 LAB7:    goto LAB5;
 
-LAB8:    t2 = (t0 + 4401);
+LAB8:    t2 = (t0 + 4441);
     xsi_report(t2, 32U, (unsigned char)2);
     goto LAB9;
 
@@ -105,7 +105,7 @@ LAB10:    xsi_set_current_line(38, ng0);
         goto LAB14;
 
 LAB15:    xsi_set_current_line(43, ng0);
-    t2 = (t0 + 4473);
+    t2 = (t0 + 4513);
     t4 = (t0 + 2728);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -125,7 +125,7 @@ LAB11:    goto LAB10;
 
 LAB13:    goto LAB11;
 
-LAB14:    t2 = (t0 + 4441);
+LAB14:    t2 = (t0 + 4481);
     xsi_report(t2, 32U, (unsigned char)2);
     goto LAB15;
 
@@ -138,7 +138,7 @@ LAB16:    xsi_set_current_line(45, ng0);
         goto LAB20;
 
 LAB21:    xsi_set_current_line(49, ng0);
-    t2 = (t0 + 4513);
+    t2 = (t0 + 4553);
     t4 = (t0 + 2728);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -158,7 +158,7 @@ LAB17:    goto LAB16;
 
 LAB19:    goto LAB17;
 
-LAB20:    t2 = (t0 + 4481);
+LAB20:    t2 = (t0 + 4521);
     xsi_report(t2, 32U, (unsigned char)2);
     goto LAB21;
 
@@ -171,7 +171,7 @@ LAB22:    xsi_set_current_line(51, ng0);
         goto LAB26;
 
 LAB27:    xsi_set_current_line(56, ng0);
-    t2 = (t0 + 4553);
+    t2 = (t0 + 4593);
     t4 = (t0 + 2728);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -191,7 +191,7 @@ LAB23:    goto LAB22;
 
 LAB25:    goto LAB23;
 
-LAB26:    t2 = (t0 + 4521);
+LAB26:    t2 = (t0 + 4561);
     xsi_report(t2, 32U, (unsigned char)2);
     goto LAB27;
 
@@ -204,7 +204,7 @@ LAB28:    xsi_set_current_line(58, ng0);
         goto LAB32;
 
 LAB33:    xsi_set_current_line(62, ng0);
-    t2 = (t0 + 4593);
+    t2 = (t0 + 4633);
     xsi_report(t2, 30U, (unsigned char)0);
     xsi_set_current_line(65, ng0);
 
@@ -215,7 +215,7 @@ LAB29:    goto LAB28;
 
 LAB31:    goto LAB29;
 
-LAB32:    t2 = (t0 + 4561);
+LAB32:    t2 = (t0 + 4601);
     xsi_report(t2, 32U, (unsigned char)2);
     goto LAB33;
 

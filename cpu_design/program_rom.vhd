@@ -12,15 +12,13 @@ begin
     process(ADDRESS)
     begin
         case ADDRESS is
-            when "0000" => INSTRUCTION <= x"1FF"; -- LDI FF
-            when "0001" => INSTRUCTION <= x"700"; -- NOT
-            when "0010" => INSTRUCTION <= x"C05"; -- JZ 05
-            when "0011" => INSTRUCTION <= x"277"; -- ADD 77
-            when "0100" => INSTRUCTION <= x"277"; -- ADD 77
-            when "0101" => INSTRUCTION <= x"211"; -- ADD 11
-            when "0110" => INSTRUCTION <= x"800"; -- SHL
-            when "0111" => INSTRUCTION <= x"C00"; -- JZ 00
-            when "1000" => INSTRUCTION <= x"800"; -- SHL
+            when "0000" => INSTRUCTION <= x"180"; -- LDI 0x80
+            when "0001" => INSTRUCTION <= x"900"; -- SHR
+            when "0010" => INSTRUCTION <= x"310"; -- SUB 0x10
+            when "0011" => INSTRUCTION <= x"20F"; -- ADD 0x0F
+				when "0100" => INSTRUCTION <= x"63F"; -- XOR 0x3F
+            when "0101" => INSTRUCTION <= x"207"; -- ADD 0x07
+            when "0110" => INSTRUCTION <= x"900"; -- SHR
             when others => INSTRUCTION <= x"000"; -- NOP
         end case;
     end process;

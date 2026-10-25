@@ -6,7 +6,6 @@ ENTITY cpu_top_tb IS
 END cpu_top_tb;
 
 ARCHITECTURE behavior OF cpu_top_tb IS
-
     COMPONENT cpu_top
         PORT (
             CLK   : IN  std_logic;
@@ -24,7 +23,6 @@ ARCHITECTURE behavior OF cpu_top_tb IS
     signal Q  : std_logic_vector(7 downto 0);
     signal Z  : std_logic;
     signal PC : std_logic_vector(3 downto 0);
-
     constant CLK_PERIOD : time := 20 ns;
 
 BEGIN
@@ -37,7 +35,6 @@ BEGIN
             Z     => Z,
             PC    => PC
         );
-
     -- Clock generation: 20 ns period
     clk_process : process
     begin
@@ -46,74 +43,32 @@ BEGIN
         CLK <= '1';
         wait for CLK_PERIOD / 2;
     end process;
-    -- Set 9 test sequence
+    -- Set 3 test sequence (LDI, ADD, SHR, SUB, XOR)
     stim_proc : process
     begin
-        -- Apply synchronous reset
         RESET <= '1';
-        wait for CLK_PERIOD;
-        wait for 1 ns;
-
-        assert Q = x"00" and Z = '1' and PC = "0000"
-            report "FAIL: Reset state"
-            severity error;
-
+        wait for CLK_PERIOD; wait for 1 ns;
+        assert Q = x"00" and Z = '1' and PC = "0000" report "FAIL: Reset state" severity error;
         RESET <= '0';
-        -- Instruction 0: LDI FF
-        wait for CLK_PERIOD;
-        wait for 1 ns;
+        wait for CLK_PERIOD; wait for 1 ns;   -- LDI 0x80
+        assert Q = x"80" and Z = '0' and PC = "0001" report "FAIL: LDI 80" severity error;
 
-        assert Q = x"FF" and Z = '0' and PC = "0001"
-            report "FAIL: LDI FF"
-            severity error;
+        wait for CLK_PERIOD;                  -- SHR
+        assert Q = x"40" and Z = '0' and PC = "0010" report "FAIL: SHR (addr 1)" severity error;
+        wait for CLK_PERIOD;                  -- SUB 0x10
+        assert Q = x"30" and Z = '0' and PC = "0011" report "FAIL: SUB 10" severity error;
 
-        -- Instruction 1: NOT
-        wait for CLK_PERIOD;
-        wait for 1 ns;
-        assert Q = x"00" and Z = '1' and PC = "0010"
-            report "FAIL: NOT"
-            severity error;
+        wait for CLK_PERIOD;                  -- ADD 0x0F
+        assert Q = x"3F" and Z = '0' and PC = "0100" report "FAIL: ADD 0F" severity error;
+        wait for CLK_PERIOD;                  -- XOR 0x3F
+        assert Q = x"00" and Z = '1' and PC = "0101" report "FAIL: XOR 3F" severity error;
 
-        -- Instruction 2: JZ 05 (taken)
-        wait for CLK_PERIOD;
-        wait for 1 ns;
+        wait for CLK_PERIOD;                  -- ADD 0x07
+        assert Q = x"07" and Z = '0' and PC = "0110" report "FAIL: ADD 07" severity error;
+        wait for CLK_PERIOD;                  -- SHR
+        assert Q = x"03" and Z = '0' and PC = "0111" report "FAIL: SHR (addr 6)" severity error;
 
-        assert Q = x"00" and Z = '1' and PC = "0101"
-            report "FAIL: JZ 05"
-            severity error;
-        -- Instruction 5: ADD 11
-        wait for CLK_PERIOD;
-        wait for 1 ns;
-
-        assert Q = x"11" and Z = '0' and PC = "0110"
-            report "FAIL: ADD 11"
-            severity error;
-
-        -- Instruction 6: SHL
-        wait for CLK_PERIOD;
-        wait for 1 ns;
-        assert Q = x"22" and Z = '0' and PC = "0111"
-            report "FAIL: SHL at address 6"
-            severity error;
-
-        -- Instruction 7: JZ 00 (not taken)
-        wait for CLK_PERIOD;
-        wait for 1 ns;
-
-        assert Q = x"22" and Z = '0' and PC = "1000"
-            report "FAIL: JZ 00 not taken"
-            severity error;
-        -- Instruction 8: SHL
-        wait for CLK_PERIOD;
-        wait for 1 ns;
-
-        assert Q = x"44" and Z = '0' and PC = "1001"
-            report "FAIL: SHL at address 8"
-            severity error;
-
-        report "Set 9 CPU testbench completed."
-            severity note;
-
+        report "Set 3 CPU testbench completed." severity note;
         wait;
     end process;
 

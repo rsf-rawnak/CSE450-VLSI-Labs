@@ -1,2 +1,5 @@
 xst -intstyle ise -ifn "/home/ise/computer/cpu_design/instruction_decoder.xst" -ofn "/home/ise/computer/cpu_design/instruction_decoder.syr" 
 xst -intstyle ise -ifn "/home/ise/computer/cpu_design/instruction_decoder.xst" -ofn "/home/ise/computer/cpu_design/instruction_decoder.syr" 
+xst -intstyle ise -ifn "/home/ise/computer/tasnim/cpu_design/instruction_decoder.xst" -ofn "/home/ise/computer/tasnim/cpu_design/instruction_decoder.syr" 
+xst -intstyle ise -ifn "/home/ise/computer/tasnim/cpu_design/instruction_decoder.xst" -ofn "/home/ise/computer/tasnim/cpu_design/instruction_decoder.syr" 
+xst -intstyle ise -ifn "/home/ise/computer/Rawnak/cpu_design/instruction_decoder.xst" -ofn "/home/ise/computer/Rawnak/cpu_design/instruction_decoder.syr" 

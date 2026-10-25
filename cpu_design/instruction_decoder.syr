@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/ise/computer/cpu_design/instruction_decoder.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/instruction_decoder.vhd" into library work
 Parsing entity <instruction_decoder>.
 Parsing architecture <Behavioral> of entity <instruction_decoder>.
 
@@ -123,19 +123,15 @@ Elaborating entity <instruction_decoder> (architecture <Behavioral>) from librar
 =========================================================================
 
 Synthesizing Unit <instruction_decoder>.
-    Related source file is "/home/ise/computer/cpu_design/instruction_decoder.vhd".
-    Found 16x5-bit Read Only RAM for signal <_n0026>
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/instruction_decoder.vhd".
     Summary:
-	inferred   1 RAM(s).
+	no macro.
 Unit <instruction_decoder> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Macro Statistics
-# RAMs                                                 : 1
- 16x5-bit single-port Read Only RAM                    : 1
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -143,27 +139,10 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <instruction_decoder>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0026> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 5-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <OPCODE>        |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <JZ_EN>         |          |
-    -----------------------------------------------------------------------
-Unit <instruction_decoder> synthesized (advanced).
-
 =========================================================================
 Advanced HDL Synthesis Report
 
-Macro Statistics
-# RAMs                                                 : 1
- 16x5-bit single-port distributed Read Only RAM        : 1
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -203,11 +182,9 @@ Top Level Output File Name         : instruction_decoder.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 5
-#      LUT4                        : 5
-# IO Buffers                       : 29
+# IO Buffers                       : 24
 #      IBUF                        : 12
-#      OBUF                        : 17
+#      OBUF                        : 12
 
 Device utilization summary:
 ---------------------------
@@ -216,19 +193,17 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    5  out of  63400     0%  
-    Number used as Logic:                 5  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      5
-   Number with an unused Flip Flop:       5  out of      5   100%  
-   Number with an unused LUT:             0  out of      5     0%  
-   Number of fully used LUT-FF pairs:     0  out of      5     0%  
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          29
- Number of bonded IOBs:                  29  out of    210    13%  
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    210    11%  
 
 Specific Feature Utilization:
 
@@ -263,7 +238,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 0.957ns
+   Maximum combinational path delay: 0.280ns
 
 Timing Details:
 ---------------
@@ -271,22 +246,21 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 32 / 17
+  Total number of paths / destination ports: 12 / 12
 -------------------------------------------------------------------------
-Delay:               0.957ns (Levels of Logic = 3)
-  Source:            INSTRUCTION<9> (PAD)
-  Destination:       LOAD_EN (PAD)
+Delay:               0.280ns (Levels of Logic = 2)
+  Source:            INSTRUCTION<11> (PAD)
+  Destination:       OPCODE<3> (PAD)
 
-  Data Path: INSTRUCTION<9> to LOAD_EN
+  Data Path: INSTRUCTION<11> to OPCODE<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   0.001   0.579  INSTRUCTION_9_IBUF (OPCODE_1_OBUF)
-     LUT4:I0->O            1   0.097   0.279  Mram__n002641 (LOAD_EN_OBUF)
-     OBUF:I->O                 0.000          LOAD_EN_OBUF (LOAD_EN)
+     IBUF:I->O             1   0.001   0.279  INSTRUCTION_11_IBUF (OPCODE_3_OBUF)
+     OBUF:I->O                 0.000          OPCODE_3_OBUF (OPCODE<3>)
     ----------------------------------------
-    Total                      0.957ns (0.098ns logic, 0.859ns route)
-                                       (10.2% logic, 89.8% route)
+    Total                      0.280ns (0.001ns logic, 0.279ns route)
+                                       (0.4% logic, 99.6% route)
 
 =========================================================================
 
@@ -297,14 +271,14 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.60 secs
+Total CPU time to Xst completion: 8.22 secs
  
 --> 
 
 
-Total memory usage is 593888 kilobytes
+Total memory usage is 593112 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

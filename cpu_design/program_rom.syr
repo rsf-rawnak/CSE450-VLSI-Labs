@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: program_rom.prj
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/ise/computer/cpu_design/program_rom.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/program_rom.vhd" into library work
 Parsing entity <program_rom>.
 Parsing architecture <Behavioral> of entity <program_rom>.
 
@@ -123,7 +123,7 @@ Elaborating entity <program_rom> (architecture <Behavioral>) from library <work>
 =========================================================================
 
 Synthesizing Unit <program_rom>.
-    Related source file is "/home/ise/computer/cpu_design/program_rom.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/program_rom.vhd".
     Found 16x12-bit Read Only RAM for signal <INSTRUCTION>
     Summary:
 	inferred   1 RAM(s).
@@ -204,8 +204,9 @@ Top Level Output File Name         : program_rom.ngc
 Primitive and Black Box Usage:
 ------------------------------
 # BELS                             : 9
+#      GND                         : 1
 #      LUT3                        : 1
-#      LUT4                        : 8
+#      LUT4                        : 7
 # IO Buffers                       : 16
 #      IBUF                        : 4
 #      OBUF                        : 12
@@ -217,14 +218,14 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    9  out of  63400     0%  
-    Number used as Logic:                 9  out of  63400     0%  
+ Number of Slice LUTs:                    8  out of  63400     0%  
+    Number used as Logic:                 8  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      9
-   Number with an unused Flip Flop:       9  out of      9   100%  
-   Number with an unused LUT:             0  out of      9     0%  
-   Number of fully used LUT-FF pairs:     0  out of      9     0%  
+ Number of LUT Flip Flop pairs used:      8
+   Number with an unused Flip Flop:       8  out of      8   100%  
+   Number with an unused LUT:             0  out of      8     0%  
+   Number of fully used LUT-FF pairs:     0  out of      8     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -264,7 +265,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 0.980ns
+   Maximum combinational path delay: 0.976ns
 
 Timing Details:
 ---------------
@@ -272,21 +273,21 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 47 / 12
+  Total number of paths / destination ports: 43 / 11
 -------------------------------------------------------------------------
-Delay:               0.980ns (Levels of Logic = 3)
+Delay:               0.976ns (Levels of Logic = 3)
   Source:            ADDRESS<3> (PAD)
-  Destination:       INSTRUCTION<6> (PAD)
+  Destination:       INSTRUCTION<2> (PAD)
 
-  Data Path: ADDRESS<3> to INSTRUCTION<6>
+  Data Path: ADDRESS<3> to INSTRUCTION<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             9   0.001   0.593  ADDRESS_3_IBUF (ADDRESS_3_IBUF)
-     LUT4:I0->O            3   0.097   0.289  INSTRUCTION<5>1 (INSTRUCTION_5_OBUF)
-     OBUF:I->O                 0.000          INSTRUCTION_6_OBUF (INSTRUCTION<6>)
+     IBUF:I->O             8   0.001   0.589  ADDRESS_3_IBUF (ADDRESS_3_IBUF)
+     LUT4:I0->O            3   0.097   0.289  INSTRUCTION<1>11 (INSTRUCTION_1_OBUF)
+     OBUF:I->O                 0.000          INSTRUCTION_2_OBUF (INSTRUCTION<2>)
     ----------------------------------------
-    Total                      0.980ns (0.098ns logic, 0.882ns route)
+    Total                      0.976ns (0.098ns logic, 0.878ns route)
                                        (10.0% logic, 90.0% route)
 
 =========================================================================
@@ -298,12 +299,12 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.60 secs
+Total CPU time to Xst completion: 8.33 secs
  
 --> 
 
 
-Total memory usage is 593440 kilobytes
+Total memory usage is 593272 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/computer/cpu_design/program_counter.vhd";
+static const char *ng0 = "/home/ise/computer/Rawnak/cpu_design/program_counter.vhd";
 
 
 
@@ -41,13 +41,13 @@ static void work_a_3430011751_1181938964_p_0(char *t0)
 
 LAB0:    xsi_set_current_line(54, ng0);
 
-LAB3:    t1 = (t0 + 1832U);
+LAB3:    t1 = (t0 + 1512U);
     t2 = *((char **)t1);
     t3 = (7 - 3);
     t4 = (t3 * 1U);
     t5 = (0 + t4);
     t1 = (t2 + t5);
-    t6 = (t0 + 4024);
+    t6 = (t0 + 3704);
     t7 = (t6 + 56U);
     t8 = *((char **)t7);
     t9 = (t8 + 56U);
@@ -55,7 +55,7 @@ LAB3:    t1 = (t0 + 1832U);
     memcpy(t10, t1, 4U);
     xsi_driver_first_trans_fast_port(t6);
 
-LAB2:    t11 = (t0 + 3944);
+LAB2:    t11 = (t0 + 3624);
     *((int *)t11) = 1;
 
 LAB1:    return;

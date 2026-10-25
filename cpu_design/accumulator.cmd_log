@@ -1,2 +1,4 @@
 xst -intstyle ise -ifn "/home/ise/computer/cpu_design/accumulator.xst" -ofn "/home/ise/computer/cpu_design/accumulator.syr" 
 xst -intstyle ise -ifn "/home/ise/computer/cpu_design/accumulator.xst" -ofn "/home/ise/computer/cpu_design/accumulator.syr" 
+xst -intstyle ise -ifn "/home/ise/computer/tasnim/cpu_design/accumulator.xst" -ofn "/home/ise/computer/tasnim/cpu_design/accumulator.syr" 
+xst -intstyle ise -ifn "/home/ise/computer/Rawnak/cpu_design/accumulator.xst" -ofn "/home/ise/computer/Rawnak/cpu_design/accumulator.syr" 

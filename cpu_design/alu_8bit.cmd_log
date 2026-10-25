@@ -1,1 +1,4 @@
 xst -intstyle ise -ifn "/home/ise/computer/cpu_design/alu_8bit.xst" -ofn "/home/ise/computer/cpu_design/alu_8bit.syr" 
+xst -intstyle ise -ifn "/home/ise/computer/tasnim/cpu_design/alu_8bit.xst" -ofn "/home/ise/computer/tasnim/cpu_design/alu_8bit.syr" 
+xst -intstyle ise -ifn "/home/ise/computer/tasnim/cpu_design/alu_8bit.xst" -ofn "/home/ise/computer/tasnim/cpu_design/alu_8bit.syr" 
+xst -intstyle ise -ifn "/home/ise/computer/Rawnak/cpu_design/alu_8bit.xst" -ofn "/home/ise/computer/Rawnak/cpu_design/alu_8bit.syr" 

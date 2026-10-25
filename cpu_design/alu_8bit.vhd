@@ -3,15 +3,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity alu_8bit is
     Port (
-        A      : in  STD_LOGIC_VECTOR(7 downto 0);
-        B      : in  STD_LOGIC_VECTOR(7 downto 0);
-        OP     : in  STD_LOGIC;
-        RESULT : out STD_LOGIC_VECTOR(7 downto 0);
-        COUT   : out STD_LOGIC
+        A      : in  STD_LOGIC_VECTOR(7 downto 0);   -- ACC
+        B      : in  STD_LOGIC_VECTOR(7 downto 0);   -- operand
+        OP     : in  STD_LOGIC_VECTOR(1 downto 0);   -- 00 ADD, 01 XOR, 10 SUB, 11 SHR
+        RESULT : out STD_LOGIC_VECTOR(7 downto 0)
     );
 end alu_8bit;
 architecture Structural of alu_8bit is
-
     component full_adder_8bit
         Port (
             A    : in  STD_LOGIC_VECTOR(7 downto 0);
@@ -21,99 +19,35 @@ architecture Structural of alu_8bit is
             COUT : out STD_LOGIC
         );
     end component;
-
+    component xor_gate
+        Port ( A : in STD_LOGIC; B : in STD_LOGIC; Y : out STD_LOGIC );
+    end component;
     component not_gate
-        Port (
-            A : in  STD_LOGIC;
-            Y : out STD_LOGIC
-        );
+        Port ( A : in STD_LOGIC; Y : out STD_LOGIC );
     end component;
-    component and_gate
-        Port (
-            A : in  STD_LOGIC;
-            B : in  STD_LOGIC;
-            Y : out STD_LOGIC
-        );
-    end component;
-
-    component or_gate
-        Port (
-            A : in  STD_LOGIC;
-            B : in  STD_LOGIC;
-            Y : out STD_LOGIC
-        );
-    end component;
-    signal B_INV      : STD_LOGIC_VECTOR(7 downto 0);
-    signal B_OPERAND  : STD_LOGIC_VECTOR(7 downto 0);
-    signal SUM_INT    : STD_LOGIC_VECTOR(7 downto 0);
-    signal CARRY_INT  : STD_LOGIC;
-    signal BORROW_INT : STD_LOGIC;
-    signal NOT_OP     : STD_LOGIC;
-    signal FLAG_ADD   : STD_LOGIC;
-    signal FLAG_SUB   : STD_LOGIC;
-
+    signal ADD_R, XOR_R, SUB_R, SHR_R : STD_LOGIC_VECTOR(7 downto 0);
+    signal B_NOT : STD_LOGIC_VECTOR(7 downto 0);   -- ~B, needed for SUB
+    signal CARRY_UNUSED  : STD_LOGIC;
+    signal CARRY_UNUSED2 : STD_LOGIC;
 begin
-    -- Invert every bit of B for subtraction
-    GEN_NOT_B: for i in 0 to 7 generate
-        INV_B: not_gate
-            port map (
-                A => B(i),
-                Y => B_INV(i)
-            );
-    end generate GEN_NOT_B;
-
-    -- Select B for addition or NOT B for subtraction
-    GEN_OPERAND: for i in 0 to 7 generate
-        B_OPERAND(i) <= B(i) when OP = '0'
-                        else B_INV(i);
-    end generate GEN_OPERAND;
-    -- A + B for OP=0
-    -- A + NOT(B) + 1 for OP=1
+    -- ADD : A + B (carry discarded)
     ADDER: full_adder_8bit
-        port map (
-            A    => A,
-            B    => B_OPERAND,
-            CIN  => OP,
-            SUM  => SUM_INT,
-            COUT => CARRY_INT
-        );
+        port map (A => A, B => B, CIN => '0', SUM => ADD_R, COUT => CARRY_UNUSED);
+    -- XOR bit by bit, and invert every bit of B (for SUB)
+    GEN_LOGIC: for i in 0 to 7 generate
+        X: xor_gate port map (A => A(i), B => B(i), Y => XOR_R(i));
+        N: not_gate port map (A => B(i), Y => B_NOT(i));
+    end generate;
+    -- SUB : A - B = A + (~B) + 1   (two's complement, modulo 256)
+    SUBTRACTOR: full_adder_8bit
+        port map (A => A, B => B_NOT, CIN => '1', SUM => SUB_R, COUT => CARRY_UNUSED2);
 
-    -- Invert OP
-    INV_OP: not_gate
-        port map (
-            A => OP,
-            Y => NOT_OP
-        );
-    -- For subtraction, borrow = NOT(carry out)
-    INV_CARRY: not_gate
-        port map (
-            A => CARRY_INT,
-            Y => BORROW_INT
-        );
+    -- SHR : logical shift right by 1, 0 enters the MSB
+    SHR_R <= '0' & A(7 downto 1);
 
-    -- Select carry flag for addition
-    AND_ADD: and_gate
-        port map (
-            A => CARRY_INT,
-            B => NOT_OP,
-            Y => FLAG_ADD
-        );
-    -- Select borrow flag for subtraction
-    AND_SUB: and_gate
-        port map (
-            A => BORROW_INT,
-            B => OP,
-            Y => FLAG_SUB
-        );
-
-    -- Combine the selected flags
-    OR_FLAG: or_gate
-        port map (
-            A => FLAG_ADD,
-            B => FLAG_SUB,
-            Y => COUT
-        );
-
-    RESULT <= SUM_INT;
-
+    with OP select
+        RESULT <= ADD_R when "00",
+                  XOR_R when "01",
+                  SUB_R when "10",
+                  SHR_R when others;
 end Structural;

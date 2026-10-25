@@ -108,43 +108,43 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/ise/computer/cpu_design/nand_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/nand_gate.vhd" into library work
 Parsing entity <nand_gate>.
 Parsing architecture <Dataflow> of entity <nand_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/xor_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/xor_gate.vhd" into library work
 Parsing entity <xor_gate>.
 Parsing architecture <Structural> of entity <xor_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/not_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/not_gate.vhd" into library work
 Parsing entity <not_gate>.
 Parsing architecture <Structural> of entity <not_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/and_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/and_gate.vhd" into library work
 Parsing entity <and_gate>.
 Parsing architecture <Structural> of entity <and_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/or_gate.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/or_gate.vhd" into library work
 Parsing entity <or_gate>.
 Parsing architecture <Structural> of entity <or_gate>.
-Parsing VHDL file "/home/ise/computer/cpu_design/half_adder.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/half_adder.vhd" into library work
 Parsing entity <half_adder>.
 Parsing architecture <Structural> of entity <half_adder>.
-Parsing VHDL file "/home/ise/computer/cpu_design/d_latch.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/d_latch.vhd" into library work
 Parsing entity <d_latch>.
 Parsing architecture <Structural> of entity <d_latch>.
-Parsing VHDL file "/home/ise/computer/cpu_design/mux_8bit.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/mux_8bit.vhd" into library work
 Parsing entity <mux_8bit>.
 Parsing architecture <Structural> of entity <mux_8bit>.
-Parsing VHDL file "/home/ise/computer/cpu_design/full_adder.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/full_adder.vhd" into library work
 Parsing entity <full_adder>.
 Parsing architecture <Structural> of entity <full_adder>.
-Parsing VHDL file "/home/ise/computer/cpu_design/d_flip_flop.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/d_flip_flop.vhd" into library work
 Parsing entity <d_flip_flop>.
 Parsing architecture <Structural> of entity <d_flip_flop>.
-Parsing VHDL file "/home/ise/computer/cpu_design/register_8bit.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/register_8bit.vhd" into library work
 Parsing entity <register_8bit>.
 Parsing architecture <Structural> of entity <register_8bit>.
-Parsing VHDL file "/home/ise/computer/cpu_design/full_adder_8bit.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/full_adder_8bit.vhd" into library work
 Parsing entity <full_adder_8bit>.
 Parsing architecture <Structural> of entity <full_adder_8bit>.
-Parsing VHDL file "/home/ise/computer/cpu_design/program_counter.vhd" into library work
+Parsing VHDL file "/home/ise/computer/Rawnak/cpu_design/program_counter.vhd" into library work
 Parsing entity <program_counter>.
 Parsing architecture <Structural> of entity <program_counter>.
 
@@ -177,90 +177,88 @@ Elaborating entity <mux_8bit> (architecture <Structural>) from library <work>.
 Elaborating entity <d_flip_flop> (architecture <Structural>) from library <work>.
 
 Elaborating entity <d_latch> (architecture <Structural>) from library <work>.
-WARNING:Xst:2972 - "/home/ise/computer/cpu_design/register_8bit.vhd" line 20. All outputs of instance <CLK_INV> of block <not_gate> are unconnected in block <register_8bit>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/computer/Rawnak/cpu_design/register_8bit.vhd" line 20. All outputs of instance <CLK_INV> of block <not_gate> are unconnected in block <register_8bit>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <program_counter>.
-    Related source file is "/home/ise/computer/cpu_design/program_counter.vhd".
-WARNING:Xst:647 - Input <D> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <LOAD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/ise/computer/cpu_design/program_counter.vhd" line 38: Output port <COUT> of the instance <INCREMENTER> is unconnected or connected to loadless signal.
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/program_counter.vhd".
+INFO:Xst:3210 - "/home/ise/computer/Rawnak/cpu_design/program_counter.vhd" line 38: Output port <COUT> of the instance <INCREMENTER> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <program_counter> synthesized.
 
 Synthesizing Unit <full_adder_8bit>.
-    Related source file is "/home/ise/computer/cpu_design/full_adder_8bit.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/full_adder_8bit.vhd".
     Summary:
 	no macro.
 Unit <full_adder_8bit> synthesized.
 
 Synthesizing Unit <full_adder>.
-    Related source file is "/home/ise/computer/cpu_design/full_adder.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/full_adder.vhd".
     Summary:
 	no macro.
 Unit <full_adder> synthesized.
 
 Synthesizing Unit <half_adder>.
-    Related source file is "/home/ise/computer/cpu_design/half_adder.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/half_adder.vhd".
     Summary:
 	no macro.
 Unit <half_adder> synthesized.
 
 Synthesizing Unit <xor_gate>.
-    Related source file is "/home/ise/computer/cpu_design/xor_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/xor_gate.vhd".
     Summary:
 	no macro.
 Unit <xor_gate> synthesized.
 
 Synthesizing Unit <nand_gate>.
-    Related source file is "/home/ise/computer/cpu_design/nand_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/nand_gate.vhd".
     Summary:
 	no macro.
 Unit <nand_gate> synthesized.
 
 Synthesizing Unit <and_gate>.
-    Related source file is "/home/ise/computer/cpu_design/and_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/and_gate.vhd".
     Summary:
 	no macro.
 Unit <and_gate> synthesized.
 
 Synthesizing Unit <or_gate>.
-    Related source file is "/home/ise/computer/cpu_design/or_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/or_gate.vhd".
     Summary:
 	no macro.
 Unit <or_gate> synthesized.
 
 Synthesizing Unit <register_8bit>.
-    Related source file is "/home/ise/computer/cpu_design/register_8bit.vhd".
-INFO:Xst:3210 - "/home/ise/computer/cpu_design/register_8bit.vhd" line 20: Output port <Y> of the instance <CLK_INV> is unconnected or connected to loadless signal.
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/register_8bit.vhd".
+INFO:Xst:3210 - "/home/ise/computer/Rawnak/cpu_design/register_8bit.vhd" line 20: Output port <Y> of the instance <CLK_INV> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <register_8bit> synthesized.
 
 Synthesizing Unit <not_gate>.
-    Related source file is "/home/ise/computer/cpu_design/not_gate.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/not_gate.vhd".
     Summary:
 	no macro.
 Unit <not_gate> synthesized.
 
 Synthesizing Unit <mux_8bit>.
-    Related source file is "/home/ise/computer/cpu_design/mux_8bit.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/mux_8bit.vhd".
     Summary:
 	no macro.
 Unit <mux_8bit> synthesized.
 
 Synthesizing Unit <d_flip_flop>.
-    Related source file is "/home/ise/computer/cpu_design/d_flip_flop.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/d_flip_flop.vhd".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <d_flip_flop> synthesized.
 
 Synthesizing Unit <d_latch>.
-    Related source file is "/home/ise/computer/cpu_design/d_latch.vhd".
+    Related source file is "/home/ise/computer/Rawnak/cpu_design/d_latch.vhd".
     Summary:
 	no macro.
 Unit <d_latch> synthesized.
@@ -324,23 +322,21 @@ WARNING:Xst:1290 - Hierarchical block <FA6> is unconnected in block <INCREMENTER
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <FA7> is unconnected in block <INCREMENTER>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <INV1> is unconnected in block <REG_MUX>.
+WARNING:Xst:1290 - Hierarchical block <GEN_MUX[0].AND2> is unconnected in block <REG_MUX>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <GEN_MUX[0].AND1> is unconnected in block <REG_MUX>.
+WARNING:Xst:1290 - Hierarchical block <GEN_MUX[1].AND2> is unconnected in block <REG_MUX>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <GEN_MUX[1].AND1> is unconnected in block <REG_MUX>.
+WARNING:Xst:1290 - Hierarchical block <GEN_MUX[2].AND2> is unconnected in block <REG_MUX>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <GEN_MUX[2].AND1> is unconnected in block <REG_MUX>.
+WARNING:Xst:1290 - Hierarchical block <GEN_MUX[3].AND2> is unconnected in block <REG_MUX>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <GEN_MUX[3].AND1> is unconnected in block <REG_MUX>.
+WARNING:Xst:1290 - Hierarchical block <NAND2> is unconnected in block <GEN_MUX[0].OR1>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <NAND1> is unconnected in block <GEN_MUX[0].OR1>.
+WARNING:Xst:1290 - Hierarchical block <NAND2> is unconnected in block <GEN_MUX[1].OR1>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <NAND1> is unconnected in block <GEN_MUX[1].OR1>.
+WARNING:Xst:1290 - Hierarchical block <NAND2> is unconnected in block <GEN_MUX[2].OR1>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <NAND1> is unconnected in block <GEN_MUX[2].OR1>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <NAND1> is unconnected in block <GEN_MUX[3].OR1>.
+WARNING:Xst:1290 - Hierarchical block <NAND2> is unconnected in block <GEN_MUX[3].OR1>.
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <NAND1> is unconnected in block <XOR1>.
    It will be removed from the design.
@@ -380,29 +376,29 @@ Found no macro
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND1>, <GEN_MUX[1].AND1> of unit <and_gate> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND1>, <GEN_MUX[2].AND1> of unit <and_gate> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND1>, <GEN_MUX[3].AND1> of unit <and_gate> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND1>, <GEN_MUX[4].AND1> of unit <and_gate> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND1>, <GEN_MUX[5].AND1> of unit <and_gate> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND1>, <GEN_MUX[6].AND1> of unit <and_gate> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND1>, <GEN_MUX[7].AND1> of unit <and_gate> are equivalent, second instance is removed
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[2].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[4].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[7].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[4].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[7].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[0].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[5].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[5].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[0].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[6].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[1].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[3].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[1].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[2].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
-WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[3].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
+WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND2>, <GEN_MUX[1].AND2> of unit <and_gate> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND2>, <GEN_MUX[2].AND2> of unit <and_gate> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND2>, <GEN_MUX[3].AND2> of unit <and_gate> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND2>, <GEN_MUX[4].AND2> of unit <and_gate> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND2>, <GEN_MUX[5].AND2> of unit <and_gate> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND2>, <GEN_MUX[6].AND2> of unit <and_gate> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mux_8bit>: instances <GEN_MUX[0].AND2>, <GEN_MUX[7].AND2> of unit <and_gate> are equivalent, second instance is removed
 WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[6].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[0].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[5].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[7].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[1].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[5].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[7].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[6].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[3].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[1].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[3].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[2].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[0].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[4].BIT_REG/SLAVE_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[2].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
+WARNING:Xst:2170 - Unit register_8bit : the following signal(s) form a combinatorial loop: REG_BITS[4].BIT_REG/MASTER_LATCH/NAND_Q/n0000.
 
 Optimizing unit <program_counter> ...
 
@@ -466,7 +462,7 @@ Slice Logic Distribution:
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          11
+ Number of IOs:                           6
  Number of bonded IOBs:                   6  out of    210     2%  
 
 Specific Feature Utilization:
@@ -502,7 +498,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.096ns
+   Maximum combinational path delay: 5.700ns
 
 Timing Details:
 ---------------
@@ -512,7 +508,7 @@ All values displayed in nanoseconds (ns)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 45 / 4
 -------------------------------------------------------------------------
-Delay:               6.096ns (Levels of Logic = 14)
+Delay:               5.700ns (Levels of Logic = 14)
   Source:            CLK (PAD)
   Destination:       PC<3> (PAD)
 
@@ -523,20 +519,20 @@ Delay:               6.096ns (Levels of Logic = 14)
      IBUF:I->O             8   0.001   0.589  CLK_IBUF (CLK_IBUF)
      LUT4:I0->O            2   0.097   0.299  PC_REGISTER/REG_BITS[0].BIT_REG/MASTER_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[0].BIT_REG/MASTER_LATCH/NAND_Q/n0000)
      LUT3:I2->O            6   0.097   0.318  PC_REGISTER/REG_BITS[0].BIT_REG/SLAVE_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[0].BIT_REG/SLAVE_LATCH/NAND_Q/n0000)
-     LUT2:I1->O            1   0.097   0.511  INCREMENTER/FA1/HA2/XOR1/NAND4/Y1 (PC_NEXT<1>)
-     LUT4:I1->O            2   0.097   0.299  PC_REGISTER/REG_BITS[1].BIT_REG/MASTER_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[1].BIT_REG/MASTER_LATCH/NAND_Q/n0000)
+     LUT2:I1->O            1   0.097   0.379  INCREMENTER/FA1/HA2/XOR1/NAND4/Y1 (PC_NEXT<1>)
+     LUT4:I2->O            2   0.097   0.299  PC_REGISTER/REG_BITS[1].BIT_REG/MASTER_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[1].BIT_REG/MASTER_LATCH/NAND_Q/n0000)
      LUT3:I2->O            5   0.097   0.398  PC_REGISTER/REG_BITS[1].BIT_REG/SLAVE_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[1].BIT_REG/SLAVE_LATCH/NAND_Q/n0000)
-     LUT3:I1->O            1   0.097   0.511  INCREMENTER/FA2/HA2/XOR1/NAND4/Y1 (PC_NEXT<2>)
-     LUT4:I1->O            2   0.097   0.299  PC_REGISTER/REG_BITS[2].BIT_REG/MASTER_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[2].BIT_REG/MASTER_LATCH/NAND_Q/n0000)
+     LUT3:I1->O            1   0.097   0.379  INCREMENTER/FA2/HA2/XOR1/NAND4/Y1 (PC_NEXT<2>)
+     LUT4:I2->O            2   0.097   0.299  PC_REGISTER/REG_BITS[2].BIT_REG/MASTER_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[2].BIT_REG/MASTER_LATCH/NAND_Q/n0000)
      LUT3:I2->O            4   0.097   0.309  PC_REGISTER/REG_BITS[2].BIT_REG/SLAVE_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[2].BIT_REG/SLAVE_LATCH/NAND_Q/n0000)
-     LUT4:I3->O            1   0.097   0.511  PC_NEXT<3>1 (PC_NEXT<3>)
-     LUT4:I1->O            2   0.097   0.299  PC_REGISTER/REG_BITS[3].BIT_REG/MASTER_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[3].BIT_REG/MASTER_LATCH/NAND_Q/n0000)
+     LUT4:I3->O            1   0.097   0.379  PC_NEXT<3>1 (PC_NEXT<3>)
+     LUT4:I2->O            2   0.097   0.299  PC_REGISTER/REG_BITS[3].BIT_REG/MASTER_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[3].BIT_REG/MASTER_LATCH/NAND_Q/n0000)
      LUT3:I2->O            3   0.097   0.289  PC_REGISTER/REG_BITS[3].BIT_REG/SLAVE_LATCH/NAND_Q/n00001 (PC_REGISTER/REG_BITS[3].BIT_REG/SLAVE_LATCH/NAND_Q/n0000)
      INV:I->O              1   0.113   0.279  PC_REGISTER/REG_BITS[3].BIT_REG/SLAVE_LATCH/NAND_Q/Y1_INV_0 (PC_3_OBUF)
      OBUF:I->O                 0.000          PC_3_OBUF (PC<3>)
     ----------------------------------------
-    Total                      6.096ns (1.181ns logic, 4.915ns route)
-                                       (19.4% logic, 80.6% route)
+    Total                      5.700ns (1.181ns logic, 4.519ns route)
+                                       (20.7% logic, 79.3% route)
 
 =========================================================================
 
@@ -546,15 +542,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 8.39 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.33 secs
  
 --> 
 
 
-Total memory usage is 594308 kilobytes
+Total memory usage is 594296 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   72 (   0 filtered)
+Number of warnings :   69 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

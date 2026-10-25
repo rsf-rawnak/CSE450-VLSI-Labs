@@ -3,65 +3,26 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity control_unit is
     Port (
-        CLK         : in  STD_LOGIC;
-        RESET       : in  STD_LOGIC;
-        INSTRUCTION : in  STD_LOGIC_VECTOR(11 downto 0);
-
-        LOAD_EN     : out STD_LOGIC;
-        ADD_EN      : out STD_LOGIC;
-        NOT_EN      : out STD_LOGIC;
-        SHL_EN      : out STD_LOGIC;
-        JZ_EN       : out STD_LOGIC;
-        PC_RESET    : out STD_LOGIC;
-        PC_LOAD     : out STD_LOGIC
+        OPCODE   : in  STD_LOGIC_VECTOR(3 downto 0);
+        LOAD_EN  : out STD_LOGIC;                      -- LDI
+        ALU_OP   : out STD_LOGIC_VECTOR(1 downto 0);   -- 00 ADD, 01 XOR, 10 SUB, 11 SHR
+        ACC_WR   : out STD_LOGIC                       -- write ACC this cycle
     );
 end control_unit;
 architecture Behavioral of control_unit is
 begin
-
-    process(CLK)
+    process(OPCODE)
     begin
-        if rising_edge(CLK) then
-            if RESET = '1' then
-                LOAD_EN  <= '0';
-                ADD_EN   <= '0';
-                NOT_EN   <= '0';
-                SHL_EN   <= '0';
-                JZ_EN    <= '0';
-                PC_RESET <= '1';
-                PC_LOAD  <= '0';
-            else
-                LOAD_EN  <= '0';
-                ADD_EN   <= '0';
-                NOT_EN   <= '0';
-                SHL_EN   <= '0';
-                JZ_EN    <= '0';
-                PC_RESET <= '0';
-                PC_LOAD  <= '0';
-
-                case INSTRUCTION(11 downto 8) is
-
-                    when "0001" =>
-                        LOAD_EN <= '1';
-
-                    when "0010" =>
-                        ADD_EN <= '1';
-                    when "0111" =>
-                        NOT_EN <= '1';
-
-                    when "1000" =>
-                        SHL_EN <= '1';
-
-                    when "1100" =>
-                        JZ_EN   <= '1';
-                        PC_LOAD <= '1';
-
-                    when others =>
-                        null;
-
-                end case;
-            end if;
-        end if;
+        LOAD_EN <= '0';
+        ALU_OP  <= "00";
+        ACC_WR  <= '0';
+        case OPCODE is
+            when "0001" => LOAD_EN <= '1'; ACC_WR <= '1';   -- LDI
+            when "0010" => ALU_OP <= "00"; ACC_WR <= '1';   -- ADD
+            when "0011" => ALU_OP <= "10"; ACC_WR <= '1';   -- SUB
+            when "0110" => ALU_OP <= "01"; ACC_WR <= '1';   -- XOR
+            when "1001" => ALU_OP <= "11"; ACC_WR <= '1';   -- SHR
+            when others => null;                            -- NOP
+        end case;
     end process;
-
 end Behavioral;

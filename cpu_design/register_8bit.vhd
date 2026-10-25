@@ -27,8 +27,8 @@ begin
     -- and mux B for SEL='1'.
     REG_MUX : entity work.mux_8bit
         port map (
-            A   => (others => '0'),
-            B   => D,
+            A   => D,                  -- SEL = '0' (normal): pass D
+            B   => (others => '0'),    -- SEL = '1' (RESET): zero
             SEL => RESET,
             Y   => REG_NEXT
         );
