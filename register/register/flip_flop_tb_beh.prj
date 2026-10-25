@@ -1,3 +1,0 @@
-vhdl work "nand_gate.vhd"
-vhdl work "flip_flop.vhd"
-vhdl work "flip_flop_tb.vhd"

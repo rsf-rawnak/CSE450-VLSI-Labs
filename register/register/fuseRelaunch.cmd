@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/ise/computer/register/register/nand_gate_tb_isim_beh.exe" -prj "/home/ise/computer/register/register/nand_gate_tb_beh.prj" "work.nand_gate_tb" 
